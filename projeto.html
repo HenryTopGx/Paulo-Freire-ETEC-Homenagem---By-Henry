@@ -1,0 +1,917 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+	<title>Paulo Freire</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+	<link rel="icon" href="favicon.png" type="image/x-icon">
+	<link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+
+	<style>
+	body{
+		margin: 0;
+		
+		overflow: hidden;
+		overflow-x: hidden;
+		
+	}
+	body, html {
+    margin: 0;
+    padding: 0;
+}
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+	/* Desabilita seleção de texto em todos os elementos */
+
+
+	.slidecontainer{
+		position: fixed;
+		overflow: hidden;
+		width: 100vw;
+        height: 100%;
+        background: #00196B;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+	}
+	/* Estiliza a barra de rolagem (thumb) */
+.box::-webkit-scrollbar-thumb {
+    background-color: darkgrey; /* Cor do thumb */
+    border-radius: 30px;        /* Bordas arredondadas */
+}
+
+/* Estiliza a trilha da barra de rolagem (track) */
+.box::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0); /* Cor de fundo da trilha */
+    border-radius: 30px; /* Bordas arredondadas na trilha */
+}
+
+/* Estiliza a própria barra de rolagem */
+.box::-webkit-scrollbar {
+    width: 20px; /* Largura da barra de rolagem vertical */
+    height: 10px; /* Altura da barra de rolagem horizontal (quando necessário) */
+}
+
+	.box {
+		display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza horizontalmente */
+    justify-content: center; /* Centraliza verticalmente */
+        max-width: calc(82vw - 140px);
+		width: 100%;
+        height: 100%;
+		max-height: calc(86vh);
+        background: #fff;
+		text-align: center;
+		border-radius: 40px;
+		justify-content: center;
+		align-items: center;
+		padding: 1em 6%; /* Exemplo com ems */
+
+		overflow: auto;
+		overflow-x: hidden;
+     }
+
+
+	 .img1box{
+		border-radius: 30px;
+		margin-top: 10vh;
+		margin-bottom: 10vh;
+	 }
+	 
+	 .h1style1{
+		color: #2B2B2B;
+		font-size: 50px;
+		
+	 }
+	 
+	 .font1{
+		font-family: Courier New;
+font-size: 30px;
+letter-spacing: 0px;
+word-spacing: 0px;
+color: #000000;
+font-weight: normal;
+text-decoration: none;
+font-style: normal;
+font-variant: normal;
+text-transform: none;
+	 }
+	 .animate-left {
+    animation: moveLeft 1s forwards;
+}
+
+@keyframes moveLeft {
+    0% {
+        transform: translate(0%, 0%);
+    }
+    100% {
+        transform: translate(-150%, 0%);
+        opacity: 0;
+    }
+}
+.animate-right {
+    animation: moveRight 1s forwards;
+}
+
+@keyframes moveRight {
+    0% {
+        transform: translate(0%, 0%);
+    }
+    100% {
+        transform: translate(150%, 0%);
+        opacity: 0;
+    }
+}
+	 .hrstyle1{
+		
+		width: 100%;
+		border: 1px solid black;
+	 }
+	 .hrstyle2{
+		max-width: 300px;
+		width: 100%;
+		border: 4px solid black;
+	 }
+	 .btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+	max-height: calc(88vh);
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 40px;
+	height: 100%;
+  }
+	  .btn i {
+    margin-right: 5px;
+  }
+  #btnright{
+		margin-right: 1%;
+		margin-left: 1%;
+		
+	 }
+	 #btnleft{
+		margin-right: 1%;
+		margin-left: 1%;
+
+		
+	 }
+	 .btn:hover{
+		background-color: #0062D1;
+	 }
+	 .animate-fadein {
+    animation: fadeIn 1s linear;
+}
+	 @keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+.info{
+	background-color: rgba(0, 0, 0, 0.76);
+	width: 100px;
+	height: 80px;
+	border-radius: 20px;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-items: center;
+	vertical-align: center;
+	position: absolute;
+	left: 11.4vw;
+	top: 10vh;
+	z-index: 1;
+}
+.slideAtual {
+font-family: Arial;
+font-size: 30px;
+letter-spacing: 3px;
+word-spacing: 0px;
+color: #ffffff;
+font-weight: normal;
+text-decoration: none;
+font-style: normal;
+font-variant: normal;
+text-transform: none;
+flex-direction: row;
+        justify-content: center;
+        align-items: center;
+}
+.circle {
+
+
+    width: 0;
+    height: 0;
+    background-color: blue;
+    border-radius: 50%;
+	z-index: 0;
+    animation: grow 1s forwards; /* Ajuste o tempo conforme necessário */
+}
+.circle-i {
+
+
+width: 0;
+height: 0;
+background-image: url(paulo_f.png);
+border-radius: 50%;
+z-index: 0;
+animation: grow-i 1s forwards; /* Ajuste o tempo conforme necessário */
+}
+@keyframes grow {
+    from {
+        width: 0;
+        height: 0;
+        opacity: 1;
+        border-radius: 50%;
+    }
+    to {
+        width: 100%;
+	max-width: 500px;
+	max-height: 500px;
+        height: 100%; /* Ajuste para cobrir a altura da div */
+        opacity: 1;
+        border-radius: 20px; /* Remove o arredondamento no final para preencher totalmente */
+    }
+}
+@keyframes grow-i {
+    from {
+        width: 100%;
+        height: 0px;
+        opacity: 1;
+        border-radius: 50%;
+    }
+    to {
+        width: 100%;
+	max-width: 500px;
+	max-height: 500px;
+        height: 100%; /* Ajuste para cobrir a altura da div */
+        opacity: 1;
+        border-radius: 20px; /* Remove o arredondamento no final para preencher totalmente */
+    }
+}
+.imgbox{
+	width: 0%;
+	max-height: 285px;
+    height: 120%; /* Ajuste para cobrir a altura da div */
+	display: flex;
+	align-items: center;
+	justify-items: center;
+	vertical-align: center;
+	flex-direction: row;
+    justify-content: center;
+    align-items: center;
+	border-radius: 10px;
+	background-color: rgba(0, 0, 0, 0.349);
+	
+}
+.imgbox-animation{
+	animation: imgBoxAnimation 1s forwards;
+}
+.imgbox-animationout{
+	animation: imgBoxAnimationout 1s forwards;
+}
+.grow-hr-css{
+	animation: grow-hr 2s forwards;
+}
+@keyframes grow-hr {
+    from {
+		width: 0%;
+    }
+    to {
+		width: 12%;
+        
+    }
+}
+.growout-hr-css{
+	animation: growout-hr 2s forwards;
+}
+@keyframes growout-hr {
+    from {
+		width: 12%;
+    }
+    to {
+		width: 0%;
+        
+    }
+}
+
+.grow-img-css{
+	animation: grow-img 1s forwards;
+}
+@keyframes grow-img {
+    from {
+		max-width: 0px;
+    }
+    to {
+		max-width: 240px;
+    }
+}
+.growout-img-css{
+	animation: growout-img 1s forwards;
+}
+@keyframes growout-img {
+    from {
+		max-width: 240px;
+    }
+    to {
+		max-width: 0px;
+        
+    }
+}
+
+@keyframes imgBoxAnimationout {
+    from {
+		width: 100%;
+		
+    }
+    to {
+		width: 0%;
+
+    }
+}
+@keyframes imgBoxAnimation {
+    from {
+		width: 0%;
+		
+    }
+    to {
+		width: 100%;
+
+    }
+}
+.circleout {
+
+    width: 0;
+    height: 0;
+    background-color: blue;
+    border-radius: 50%;
+	z-index: 0;
+    animation: growout 1s forwards; /* Ajuste o tempo conforme necessário */
+}
+.circleout-i {
+
+width: 0;
+height: 0;
+background-image: url(paulo_f.png);
+border-radius: 50%;
+z-index: 0;
+animation: growout 1s forwards; /* Ajuste o tempo conforme necessário */
+}
+
+@keyframes growout {
+    from {
+		width: 100%;
+		max-width: 500px;
+        max-height: 500px;
+        height: 100%; /* Ajuste para cobrir a altura da div */
+        opacity: 1;
+        border-radius: 20px; /* Remove o arredondamento no final para preencher totalmente */
+    }
+    to {
+		width: 0;
+        height: 0;
+        opacity: 1;
+        border-radius: 50%;
+        
+    }
+}
+.containerS2{
+	width: 400px;
+	height: 350px;
+	z-index: 1;
+	margin-bottom: 20px;
+	display: flex;
+	align-items: center;
+	justify-items: center;
+	vertical-align: center;
+	flex-direction: row;
+        justify-content: center;
+        align-items: center;
+}
+.containerS2p{
+	width: 400px;
+	height: 350px;
+	z-index: 1;
+	margin-bottom: 20px;
+	display: flex;
+	align-items: center;
+	justify-items: center;
+	vertical-align: center;
+	flex-direction: row;
+        justify-content: center;
+        align-items: center;
+}
+.image-container {
+    position: relative;
+    display: inline-block; /* Ou block, dependendo do layout necessário */
+}
+
+
+
+.image-container {
+    position: relative;
+    display: inline-block; /* Ou block, dependendo do layout necessário */
+	display: flex;
+	align-items: center;
+	justify-items: center;
+	vertical-align: center;
+	flex-direction: row;
+        justify-content: center;
+        align-items: center;
+	
+}
+
+.img2box {
+    display: block; /* Remove espaçamento abaixo da imagem */
+    width: 100%;
+	max-width: 500px; /* Ajuste conforme necessário */
+    height: auto; /* Mantém a proporção da imagem */
+    position: relative;
+    z-index: 3; /* Certifique-se de que a imagem está acima do span */
+}
+
+.image-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 255, 0.5); /* Exemplo de background azul semi-transparente */
+
+    z-index: 2; /* Fica atrás da imagem devido ao menor z-index */
+}
+.image3-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+	width: 100%;
+	max-width: 500px; /* Ajuste conforme necessário */
+	background-size: cover;
+    /*height: 100%;*/
+    background-image: url(paulo_f.png); /* Exemplo de background azul semi-transparente */
+	background-repeat: no-repeat;
+    z-index: 2; /* Fica atrás da imagem devido ao menor z-index */
+}
+.ps3{
+text-align: justify;
+font-family: Tahoma;
+font-size: 24px;
+letter-spacing: 0px;
+word-spacing: 0px;
+color: #000000;
+font-weight: normal;
+text-decoration: none;
+font-style: normal;
+font-variant: normal;
+text-transform: none;
+
+}
+/* styles.css */
+.loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    z-index: 1000; /* Garante que fica na frente de tudo */
+}
+
+/* Esconde a tela de carregamento inicialmente */
+.hidden {
+    display: none;
+}
+#slide5{
+	justify-content: flex-start;
+}
+#slide6{
+	justify-content: flex-start;
+}
+#slide5 p{
+	text-align: justify;
+font-family: Tahoma;
+font-size: 24px;
+letter-spacing: 0px;
+word-spacing: 0px;
+color: #000000;
+font-weight: normal;
+text-decoration: none;
+font-style: normal;
+font-variant: normal;
+text-transform: none;
+}
+/*#slide5 h1{
+	margin-top: 1500px;
+
+}*/
+#slide5 h2 {
+    color: #2B2B2B;
+
+    font-size: 35px;
+
+}
+
+#slide7 p{
+font-family: Tahoma;
+font-size: 25px;
+text-align: left;
+letter-spacing: 0px;
+align-self: flex-start;
+word-spacing: 0px;
+color: #000000;
+font-weight: normal;
+text-decoration: none;
+font-style: normal;
+font-variant: normal;
+text-transform: none;
+}
+
+#slide4{
+	justify-content: flex-start;
+}
+#slide3{
+	justify-content: flex-start;
+}
+
+	</style>
+</head>
+
+<body>
+	<div id="loading-screen" class="loading-screen">
+        Carregando Apresentação...
+    </div>
+<div class="slidecontainer" id="slidecontainer" style="display: none;">
+	
+	<div id="slideAtualInfo" class="info slideAtual"></div>
+
+	<button class="btn" id="btnleft" onclick="voltarSlide()"><i class="fas fa-arrow-left"></i></button>
+	
+	<div class="box" id="slide1">
+	<h1 class="h1style1">Paulo Reglus Neves Freire</h1>
+	<hr class="hrstyle1">
+	<div id="containerImgBox" class="imgbox imgbox-animation">
+	<img class="img1box" src="https://th.bing.com/th/id/OIP.-9VJCGHcbM-Oo7R560oBDgHaE8?w=222&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7">
+	</div>
+	<hr class="hrstyle1">
+	<h2 class="font1">Coded and Designed By Henry - 1DS<sup>®</sup></h2>
+	</div>
+
+	<div class="box" id="slide2">
+	<h1 class="h1style1">Introdução</h1>
+	<hr class="hrstyle2">
+
+
+	<div class="image-container">
+    <span id="pAnimation" class="image-background"></span>
+    <img class="img2box" src="freire.png">
+</div>
+
+
+	
+	
+	
+
+	<hr class="hrstyle2">
+	<div style="font-size: 30px; margin-top: 40px; text-align: justify;">Paulo Freire (1921-1997) foi um dos mais importantes pedagogos brasileiros. O educador criou um método de ensino inovador acreditando que a educação era uma ferramenta essencial para a transformação da sociedade. 
+</div><div style="font-size: 30px; text-align: justify; margin-top: 6px;">
+O educador era inteiramente contra a visão tradicional da educação (de transferência de conhecimento), que vê o professor como aquele que possui a sabedoria e o aluno como aquele que recebe essa bagagem. Paulo Freire propôs um método onde professores e alunos dialogavam e o aprendizado se fazia com base nas necessidades diárias reais dos alunos.</div>
+	</div>
+	
+	<div class="box" id="slide3">
+	<h1 class="h1style1">Patrono da Educação Brasileira</h1>
+	<div class="image-container">
+		<span id="pAnimation2" class="image3-background"></span>
+		<img class="img2box" style="border-radius: 20px;" src="paulo_d.png">
+
+	</div>
+	<hr class="hrstyle1" style="margin-top: 40px; border: 2px solid darkgreen;">
+	<p class="ps3" >
+		Paulo Freire, considerado o Patrono da Educação Brasileira, é reconhecido mundialmente por suas contribuições revolucionárias à pedagogia. Seu enfoque na "educação problematizadora" desafiou o modelo tradicional de "educação bancária", promovendo um aprendizado baseado no diálogo, na reflexão crítica, e na participação ativa dos estudantes. Freire introduziu o conceito de "conscientização", incentivando os alunos a entender e transformar as estruturas socioeconômicas e políticas que moldam suas vidas. Seu trabalho teve um profundo impacto social e político, especialmente durante períodos de agitação social na América Latina, propondo a educação como uma ferramenta para a justiça social e a igualdade.
+	</p>
+		<p class="ps3" >	
+		A influência duradoura de Freire se estende além das fronteiras do Brasil, com suas teorias sendo aplicadas em programas de educação e alfabetização ao redor do mundo. Em 2012, o governo brasileiro, reconhecendo seu legado e impacto, oficializou Paulo Freire como Patrono da Educação Brasileira através de uma lei sancionada pela presidente Dilma Rousseff. Esse título reflete o profundo respeito e admiração pelo seu trabalho, que continua a inspirar educadores e ativistas na busca por uma educação que promova a liberdade e a igualdade.
+		
+		
+		
+		
+		
+	</p>
+	<hr class="hrstyle1" style="border: 4px solid gray; width: 20%; border-radius: 10px;" >
+	</div>
+	
+	<div class="box" id="slide4">
+	<h1 class="h1style1">Pedagogia do Oprimido</h1>
+	<div class="image-container" id="animB4" style="max-width: 240px; border: 5px groove brown;">
+		<span id="pAnimation" class="image-background"></span>
+		<img class="img2box" src="livro_pf.jpg">
+	</div>
+	<hr class="hrstyle1 grow-hr-css" id="animHR4" style="margin-top: 40px; width: 10%; border: 4px solid black; border-radius: 20px;">
+	<p class="ps3" >
+		
+"Pedagogia do Oprimido" é uma obra de Paulo Freire que apresenta uma crítica profunda ao modelo tradicional de educação, que ele chama de "educação bancária". Neste modelo, o conhecimento é depositado pelo educador no educando, o que perpetua a opressão e a desumanização. Freire propõe uma alternativa, a "educação problematizadora", que é baseada no diálogo e na interação crítica entre educador e educando, promovendo a conscientização e a libertação.
+</p>
+<p class="ps3" >
+No centro da pedagogia de Freire está a ideia de que a educação deve ser um ato de libertação, um processo que permite aos indivíduos compreender e transformar sua realidade. O diálogo é fundamental neste processo, pois cria uma relação de parceria entre o educador e o educando, ambos aprendendo e ensinando. Através deste diálogo, os indivíduos desenvolvem a "conscientização", uma compreensão profunda das realidades sociais, políticas e econômicas que moldam suas vidas.
+</p>
+<p class="ps3" >
+"Pedagogia do Oprimido" não apenas desafia os métodos tradicionais de educação, mas também fornece uma metodologia para o ensino e a aprendizagem que envolve respeito mútuo, criação conjunta de conhecimento e um compromisso com a justiça social e a emancipação. A obra é um chamado à ação para transformar a educação em uma ferramenta de empoderamento e mudança social.
+	</p>
+	</div>
+	<div class="box" id="slide5">
+		<h1 class="h1style1">Métodos e Conceitos Chave</h1>
+		<img class="img2box" style="max-width: 250px; margin-top: 50px; margin-bottom: 60px;" src="chave.png">
+		<hr class="hrstyle1" style="border: 2px solid black;">
+			<h2>Educação Problematizadora</h2>
+			<p>
+			A educação problematizadora, central na pedagogia de Freire, contrasta com a tradicional "educação bancária". Enquanto a última trata o estudante como um recipiente passivo a ser "enchido" com conhecimento, a educação problematizadora vê o estudante como um participante ativo no processo de aprendizagem.
+			Esse método estimula os alunos a questionar a realidade, promovendo um aprendizado que parte das experiências e realidades dos próprios estudantes, conectando os conteúdos escolares com suas vidas e comunidades.
+			</p>
+			<h2>Educação Bancária</h2>
+			<p>
+			Paulo Freire criticou o modelo tradicional de educação, que ele chamou de "educação bancária". Neste modelo, o conhecimento é depositado pelo educador no educando, sem que haja interação ou questionamento crítico por parte do aluno.
+			Freire argumenta que esse modelo reforça as hierarquias de poder e mantém os alunos em uma posição de submissão, impedindo-os de se tornarem pensadores críticos e transformadores de sua própria realidade.
+			</p>
+			<h2>Diálogo</h2>
+			<p>
+			O diálogo é o coração da pedagogia freiriana. Para Freire, o diálogo não é apenas uma técnica didática, mas uma necessidade ética fundamental para a humanização tanto dos estudantes quanto dos professores.
+			No processo educativo, o diálogo é uma ferramenta que permite a ambos, professor e aluno, aprender e ensinar simultaneamente. Isso contribui para a construção de um conhecimento que é relevante e profundamente conectado às realidades dos alunos.
+			</p>
+			<h2>Conscientização</h2>
+			<p>
+			A conscientização, ou "conscientização", é o processo pelo qual os indivíduos se tornam cientes das realidades sociais, políticas e econômicas que moldam suas vidas.
+			Este conceito é fundamental na pedagogia de Freire, pois ele propõe que a educação deve ir além do ensino acadêmico e contribuir para que os alunos se tornem cidadãos conscientes e capazes de agir para transformar suas realidades.
+			</p>
+			<h2>Cultura do Silêncio</h2>
+			<p>
+			Freire descreve a "cultura do silêncio" como a condição em que as classes oprimidas são privadas de uma voz. A educação bancária contribui para esta condição ao desencorajar o questionamento e ao reforçar o poder dos opressores.
+			Ao promover a educação problematizadora e o diálogo, Freire visa romper essa cultura do silêncio, empoderando os oprimidos para que se expressem e lutem contra as injustiças.
+			</p>
+			<hr class="hrstyle1" style="border: 2px solid black;">
+	</div>
+	<div class="box" id="slide6">
+		<h1 class="h1style1">Impacto Global e Legado de Paulo Freire</h1>
+
+		<img class="img2box" style="max-width: 300px;" src="luta.png">
+		
+		<p class="ps3">
+			Seu influente livro, "Pedagogia do Oprimido", foi traduzido em mais de 20 idiomas e adaptado a diversas realidades culturais, refletindo sua vasta aceitação em diferentes contextos sociais. Freire também teve um papel significativo na formulação de programas de alfabetização que combinavam ensino com conscientização política e social, especialmente em países em desenvolvimento. Esses programas buscavam não apenas ensinar a ler e escrever, mas também empoderar populações marginalizadas, promovendo mudanças sociais substantivas.
+
+			Freire recebeu diversos reconhecimentos internacionais, como o Prêmio da Paz da UNESCO, que celebraram seu compromisso com a educação que promove a paz e a compreensão mútua. Apesar desses elogios, enfrentou críticas de setores conservadores que consideravam suas ideias demasiadamente ideológicas ou até utópicas. Suas teorias também tiveram um impacto significativo no meio acadêmico, influenciando uma variedade de disciplinas, desde a sociologia até a pedagogia, e moldando políticas educacionais que priorizam métodos mais inclusivos e participativos.
+			
+			O legado de Paulo Freire é preservado por instituições como o Instituto Paulo Freire e continua a influenciar educadores e movimentos sociais que veem na educação crítica uma ferramenta essencial para a transformação social. As ideias de Freire sobre a necessidade de diálogo e participação ativa na educação permanecem relevantes, inspirando novas gerações a repensar e reformular práticas educativas em todo o mundo.</p>
+	</div>
+	<div class="box" id="slide7" style="overflow-wrap: break-word;">
+		<h1 class="h1style1">Referências</h1>
+
+		<p>TutorMundi: <a href="https://tutormundi.com/blog/metodo-paulo-freire">https://tutormundi.com/blog/metodo-paulo-freire</a></p>
+		<p>Politize!: <a href="https://www.politize.com.br/paulo-freire/">https://www.politize.com.br/paulo-freire/</a></p>
+		<p>Guia do Estudante: <a href="https://guiadoestudante.abril.com.br/estudo/quem-foi-paulo-freire-e-por-que-ele-e-tao-amado-e-odiado">https://guiadoestudante.abril.com.br/estudo/quem-foi-paulo-freire-e-por-que-ele-e-tao-amado-e-odiado</a></p>
+		<p>Universidade Federal Fluminense: <a href="https://nedeja.uff.br/wp-content/uploads/sites/223/2020/05/O_Mtodo_Paulo_Freire-1.pdf">https://nedeja.uff.br/wp-content/uploads/sites/223/2020/05/O_Mtodo_Paulo_Freire-1.pdf</a></p>
+		
+	</div>
+	<div class="box" id="slide8">
+		<h1 class="h1style1" style="font-size: 60px;">FIM</h1>
+
+		<div style="font-size: 30px; color: green;">Obrigado Por Chegar Até Aqui!</div>
+		
+	</div>
+	
+	<button class="btn" id="btnright" onclick="avancarSlide()"><i class="fas fa-arrow-right"></i></button>
+
+
+
+</div>
+
+
+<script>
+	// scripts.js
+window.addEventListener('load', function () {
+    var loadingScreen = document.getElementById('loading-screen');
+	var slide = document.getElementById('slidecontainer');
+	slide.style.display="flex";
+    loadingScreen.style.display="none"; // Esconde a tela de carregamento
+});
+
+var slide_atual = 1;
+var n_slides = 8;
+var i = n_slides;
+
+document.getElementById("slideAtualInfo").innerHTML=slide_atual.toString()+"/"+n_slides.toString();
+while(i > 0){
+	if(i != 1){
+		var slide = document.getElementById("slide"+i.toString());
+		slide.style.display="none";
+	}
+	i-=1;
+}
+const btna = document.getElementById("btnright");
+const btnv = document.getElementById("btnleft");
+function mover() {
+		this.style.backgroundColor = '#0062D1'; // Cor quando o mouse está sobre o botão
+		}
+function mout() {
+		this.style.backgroundColor = '#007bff'; // Cor original/quando o mouse sai
+		}
+function avancarSlide(){
+	
+	btna.style.backgroundColor = "rgb(0,0,0)";
+	btnv.style.backgroundColor = "rgb(0,0,0)";
+	
+	btna.disabled=true;
+	btnv.disabled=true;
+	btna.style.cursor = "default";
+	btnv.style.cursor = "default";
+	btna.removeEventListener('mouseover', mover);
+	btna.removeEventListener('mouseout', mout);
+	btnv.removeEventListener('mouseover', mover);
+	btnv.removeEventListener('mouseout', mout);
+	console.log("slide"+slide_atual.toString());
+	var slideA = document.getElementById("slide"+slide_atual.toString());
+    slideA.classList.remove("animate-right");
+	slideA.classList.add("animate-left");
+	var element = document.getElementById('pAnimation');
+	var element2 = document.getElementById('pAnimation2');
+	var element3 = document.getElementById('animHR4');
+	var element4 = document.getElementById('animB4');
+	if(slide_atual+1 != 2){
+		element.classList.remove('circle');
+		element.classList.add('circleout');
+	}else{
+		element.classList.remove('circleout');
+		element.classList.add('circle'); // Re-adiciona a classe para reiniciar a animação
+	}
+	if(slide_atual+1 != 3){
+		element2.classList.remove('circle-i');
+		element2.classList.add('circleout-i');
+	}else{
+		element2.classList.remove('circleout-i');
+		element2.classList.add('circle-i'); // Re-adiciona a classe para reiniciar a animação
+	}
+	if(slide_atual+1 != 4){
+		element3.classList.remove('grow-hr-css');
+		element3.classList.add('growout-hr-css');
+		element4.classList.remove('grow-img-css');
+		element4.classList.add('growout-img-css');
+	}else{
+		element3.classList.remove('growout-hr-css');
+		element3.classList.add('grow-hr-css'); // Re-adiciona a classe para reiniciar a animação
+		element4.classList.remove('growout-img-css');
+		element4.classList.add('grow-img-css'); // Re-adiciona a classe para reiniciar a animação
+	}
+	element = document.getElementById('containerImgBox');
+	if(slide_atual+1 != n_slides+1){
+		element.classList.remove('imgbox-animation');
+		element.classList.add('imgbox-animationout');
+	}else{
+		element.classList.remove('imgbox-animationout');
+		element.classList.add('imgbox-animation'); // Re-adiciona a classe para reiniciar a animação
+	}
+	
+	
+
+	if(slide_atual == n_slides){
+		var slideP = document.getElementById("slide1");
+		slide_atual=0;
+	}else{
+		var slideP = document.getElementById("slide"+(slide_atual+1).toString());
+	}
+    slideP.style.opacity="0";
+	slideP.style.position = "absolute";
+	slideP.style.display="flex";
+	slideP.classList.remove("animate-left");
+	slideP.classList.remove("animate-right");
+	slideP.classList.add("animate-fadein");
+	setTimeout(function() {
+		slideP.style.opacity="1";
+		slideA.style.position = "absolute";
+		slideP.style.position = "relative";
+        slideP.classList.remove("animate-fadein");
+
+		// Adicionando o efeito hover manualmente
+		btna.disabled = false;
+		btna.style.backgroundColor = "#007bff";
+		btna.addEventListener('mouseover', mover);
+
+		btna.addEventListener('mouseout', mout);
+
+		btnv.disabled = false;
+		btnv.style.backgroundColor = "#007bff";
+		btnv.addEventListener('mouseover', mover);
+
+		btnv.addEventListener('mouseout', mout);
+		btna.style.cursor = "pointer";
+		btnv.style.cursor = "pointer";
+    }, 950);
+
+	slide_atual+=1;
+	document.getElementById("slideAtualInfo").innerHTML=slide_atual.toString()+"/"+n_slides.toString();
+}
+
+function voltarSlide(){
+	btna.style.backgroundColor = "rgb(0,0,0)";
+	btnv.style.backgroundColor = "rgb(0,0,0)";
+	var element3 = document.getElementById('animHR4');
+	btna.disabled=true;
+	btnv.disabled=true;
+	btna.style.cursor = "default";
+	btnv.style.cursor = "default";
+	btna.removeEventListener('mouseover', mover);
+	btna.removeEventListener('mouseout', mout);
+	btnv.removeEventListener('mouseover', mover);
+	btnv.removeEventListener('mouseout', mout);
+	console.log("slide"+slide_atual.toString());
+	var slideA = document.getElementById("slide"+slide_atual.toString());
+    
+	slideA.classList.add("animate-right");
+	
+	var element = document.getElementById('pAnimation');
+	var element2 = document.getElementById('pAnimation2');
+	var element4 = document.getElementById('animB4');
+    if(slide_atual-1 != 2){
+		element.classList.remove('circle');
+		element.classList.add('circleout');
+	}else{
+		element.classList.remove('circleout');
+		element.classList.add('circle'); // Re-adiciona a classe para reiniciar a animação
+	}
+	if(slide_atual-1 != 3){
+		element2.classList.remove('circle-i');
+		element2.classList.add('circleout-i');
+	}else{
+		element2.classList.remove('circleout-i');
+		element2.classList.add('circle-i'); // Re-adiciona a classe para reiniciar a animação
+	}
+	if(slide_atual-1 != 4){
+		element3.classList.remove('grow-hr-css');
+		element3.classList.add('growout-hr-css');
+		element4.classList.remove('grow-img-css');
+		element4.classList.add('growout-img-css');
+	}else{
+		element3.classList.remove('growout-hr-css');
+		element3.classList.add('grow-hr-css'); // Re-adiciona a classe para reiniciar a animação
+		element4.classList.remove('growout-img-css');
+		element4.classList.add('grow-img-css'); // Re-adiciona a classe para reiniciar a animação
+	}
+	element = document.getElementById('containerImgBox');
+	if(slide_atual-1 != 1){
+		element.classList.remove('imgbox-animation');
+		element.classList.add('imgbox-animationout');
+	}else{
+		element.classList.remove('imgbox-animationout');
+		element.classList.add('imgbox-animation'); // Re-adiciona a classe para reiniciar a animação
+	}
+	if(slide_atual == 1){
+		var slideP = document.getElementById("slide"+n_slides.toString());
+		slide_atual=n_slides+1;
+	}else{
+		var slideP = document.getElementById("slide"+(slide_atual-1).toString());
+	}
+    slideP.style.opacity="0";
+	slideP.style.position = "absolute";
+	slideP.style.display="flex";
+    slideP.classList.remove("animate-left");
+	slideP.classList.remove("animate-right");
+	slideP.classList.add("animate-fadein");
+	setTimeout(function() {
+		slideP.style.opacity="1";
+		slideA.style.position = "absolute";
+		slideP.style.position = "relative";
+        slideP.classList.remove("animate-fadein");
+		// Adicionando o efeito hover manualmente
+		btna.disabled = false;
+		btna.style.backgroundColor = "#007bff";
+		btna.addEventListener('mouseover', mover);
+
+		btna.addEventListener('mouseout', mout);
+
+		btnv.disabled = false;
+		btnv.style.backgroundColor = "#007bff";
+		btnv.addEventListener('mouseover', mover);
+
+		btnv.addEventListener('mouseout', mout);
+		btna.style.cursor = "pointer";
+		btnv.style.cursor = "pointer";
+    }, 950);
+
+	slide_atual-=1;
+	document.getElementById("slideAtualInfo").innerHTML=slide_atual.toString()+"/"+n_slides.toString();
+}
+</script>
+</body>
+</html>
